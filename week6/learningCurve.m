@@ -57,7 +57,7 @@ for i = 1:m;
     Xtrain = X(1:i,:);
     ytrain = y(1:i,:);
     [theta] = trainLinearReg(Xtrain, ytrain, lambda);
-    [Jtrain, ~] = linearRegCostFunction(Xtrain, ytrain, theta, lambda);
+    [Jtrain, ~] = linearRegCostFunction(Xtrain, ytrain, theta, 0);
     [Jval, ~] = linearRegCostFunction(Xval, yval, theta, 0);
 %    下面两排中的m有问题
 %    Jtrain = 1/(2 * m) * sum( ( Xtrain * theta - ytrain ).^2 ) + lambda/(2*m)* sum(theta(2:size(theta,1),:).^2);
